@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Рулетка Millers</title>
-<link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Рулетка Millers</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
 <div id="parallax-bg"></div>
+
 <div id="main-container">
-  <div id="wheel-container">
-    <div id="wheel"></div>
-    <div id="pointer"></div>
-  </div>
-  <div id="participants-container">
-    <h3>Участники</h3>
-    <ul id="items"></ul>
-    <input id="newItem" placeholder="Добавить участника" />
-    <div class="buttons-row">
-      <button id="add-button" class="btn">Добавить участника</button>
-      <button id="spin-button" class="btn">Крутить колесо</button>
+
+    <div id="wheel-container">
+        <div id="wheel"></div>
+        <div id="pointer"></div>
     </div>
-    <button id="exclude-button" class="btn">Подкрутка Маги</button>
-    <label class="theme-label" for="theme-select">Тема рулетки:</label>
-    <select id="theme-select">
-      <option value="huligan">Russian Huligan</option>
-      <option value="millers">Millers</option>
-      <option value="wedding">Wedding</option>
-    </select>
-  </div>
+
+    <div id="participants-container">
+        <h3>Участники</h3>
+        <ul id="items"></ul>
+
+        <input type="text" id="newItem" placeholder="Добавить участника" autocomplete="off" />
+
+        <div class="buttons-row">
+            <button class="btn" id="add-button">Добавить участника</button>
+            <button class="btn" id="spin-button">Крутить колесо</button>
+        </div>
+
+        <button class="btn" id="exclude-button">Подкрутка Маги</button>
+
+        <label class="theme-label" for="theme-select">Тема рулетки:</label>
+        <select id="theme-select">
+            <option value="huligan">Russian Huligan</option>
+            <option value="millers">Millers</option>
+            <option value="wedding">Wedding</option>
+        </select>
+    </div>
+
 </div>
+
 <div id="dialog">
-  <div id="dialog-content">
-    <p id="winner-text">Победитель: </p>
-    <button id="remove-btn" class="btn">Убрать победителя</button>
-    <button id="close-btn" class="btn" onclick="dialog.style.display='none';">Закрыть</button>
-  </div>
+    <div id="dialog-content">
+        <p id="winner-text">Победитель:</p>
+        <div class="buttons-row">
+            <button class="btn" id="remove-btn">Убрать победителя</button>
+            <button class="btn" onclick="document.getElementById('dialog').style.display='none';">Закрыть</button>
+        </div>
+    </div>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
