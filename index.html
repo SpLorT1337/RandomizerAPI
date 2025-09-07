@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Millers</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="parallax-bg"></div>
+<div id="main-container">
+  <div id="wheel-container">
+    <div id="wheel"></div>
+    <div id="pointer"></div>
+  </div>
+
+  <div id="participants-container">
+    <h3>Участники</h3>
+    <ul id="items"></ul>
+
+    <input id="newItem" type="text" placeholder="Добавить участника" />
+    <div class="buttons-row">
+      <button id="add-button" class="btn">Добавить участника</button>
+      <button id="spin-button" class="btn">Крутить колесо</button>
+      <button id="exclude-button" class="btn">Подкрутка Маги</button>
+      <button id="dondigidon-btn" class="btn dondigidon-btn">DonDigidon</button>
+    </div>
+
+    <label class="theme-label" for="theme-select">Тема рулетки:</label>
+    <select id="theme-select">
+      <option value="huligan">Russian Huligan</option>
+      <option value="millers">Millers</option>
+      <option value="wedding">Wedding</option>
+      <option value="millers1">Millers-1</option>
+      <option value="millers2">Millers-2</option>
+      <option value="millers3">Millers-3</option>
+      <option value="millers4">Millers-4</option>
+      <option value="millers5">Millers-5</option>
+      <option value="millers6">Millers-6</option>
+      <option value="millers7">Millers-7</option>
+    </select>
+  </div>
+</div>
+
+<div id="dialog">
+  <div id="dialog-content">
+    <p id="winner-text">Победитель: ...</p>
+    <button id="remove-btn-dialog" class="btn">Убрать победителя</button>
+    <button id="close-btn" class="btn">Закрыть</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
