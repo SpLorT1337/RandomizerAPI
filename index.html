@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Millers</title>
+<title>Рулетка Миллеров</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div id="parallax-bg"></div>
+
 <div id="main-container">
   <div id="wheel-container">
     <div id="wheel"></div>
@@ -19,15 +20,13 @@
     <ul id="items"></ul>
 
     <input id="newItem" type="text" placeholder="Добавить участника" />
-    <div class="buttons-row">
-      <button id="add-button" class="btn">Добавить участника</button>
-      <button id="spin-button" class="btn">Крутить колесо</button>
-      <button id="exclude-button" class="btn">Подкрутка Маги</button>
-      <button id="dondigidon-btn" class="btn dondigidon-btn">DonDigidon</button>
-    </div>
+    <button id="add-button" class="btn">Добавить участника</button>
+    <button id="spin-button" class="btn">Крутить колесо</button>
+    <button id="exclude-button" class="btn">Подкрутка Маги</button>
+    <button id="dondigidon-btn" class="btn dondigidon-btn">DonDigidon</button>
+    <button id="history-button" class="btn">История</button>
 
-    <label class="theme-label" for="theme-select">Тема рулетки:</label>
-    <select id="theme-select">
+    <select id="theme-select" class="btn">
       <option value="huligan">Russian Huligan</option>
       <option value="millers">Millers</option>
       <option value="wedding">Wedding</option>
@@ -42,11 +41,21 @@
   </div>
 </div>
 
+<!-- Диалоговое окно победителя -->
 <div id="dialog">
   <div id="dialog-content">
-    <p id="winner-text">Победитель: ...</p>
-    <button id="remove-btn-dialog" class="btn">Убрать победителя</button>
-    <button id="close-btn" class="btn">Закрыть</button>
+    <p id="winner-text-popup">Победитель: ...</p>
+    <button id="remove-btn-dialog-popup" class="btn">Убрать победителя</button>
+    <button id="close-btn-popup" class="btn">Закрыть</button>
+  </div>
+</div>
+
+<!-- Модальное окно истории прокруток -->
+<div id="history-dialog" class="modal-hidden">
+  <div id="history-dialog-content">
+    <h3>История прокруток</h3>
+    <div id="spin-history" style="max-height: 300px; overflow-y: auto; margin-bottom: 20px;"></div>
+    <button id="close-history-btn" class="btn">Закрыть</button>
   </div>
 </div>
 
